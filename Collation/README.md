@@ -12,4 +12,9 @@ When executed, it will:
 
 # how to run
 
+Run `python ./single-cell-measurements.py <INPUT_DIR>`, replacing `<INPUT_DIR>` with the directory of your data.
+
+
+For example, you can run it on the included test data like this:
+
 `python ./single-cell-measurements.py ./testdata`
