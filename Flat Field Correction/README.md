@@ -24,11 +24,12 @@ The macro code is run through ImageJ (Plugins > Macros > Run… > select IJM mac
 5.	Divide every pixel in the image by the maximum pixel value
 6.	Save as a TIF image in the same location as the nd2 image
 
-## Perform flat field correction on nd2 images
+## Perform flat field correction on ND2 images
 [Macro_Image-Blinder]: https://github.com/bridgetryan/Experimental-Automation/blob/main/Image%20Blinder/Macro_Image-Blinder.ijm
 [Macro_Create-Reference-Image]: https://github.com/bridgetryan/Experimental-Automation/blob/main/Flat%20Field%20Correction/Macro_Create-Reference-Image.ijm
+[Sample Data]: https://github.com/bridgetryan/Experimental-Automation/tree/main/Flat%20Field%20Correction/testdata
 
-This macro automates performing flat field correction on one colour channel of multi-channel fluorescence images. It expects ND2 images that are blinded and randomized using the [Image Blinder macro][Macro_Image-Blinder]. All blinded subfolders and the TIF reference image generated using the [Create Reference Image macro][Macro_Create-Reference-Image] should be in a common source folder. 
+This macro automates performing flat field correction on one colour channel of multi-channel fluorescence images. It expects ND2 images that are blinded and randomized using the [Image Blinder macro][Macro_Image-Blinder]. All blinded subfolders and the TIF reference image generated using the [Create Reference Image macro][Macro_Create-Reference-Image] should be in a common source folder. See [testdata][Sample Data] folder for expected file organization. This macro expects the flat field reference TIF image to be named Reference_FlatField.tif.
 
 Important note: this macro assumes multi-channel images and that the channel needing flat field correction is C2. This code will likely need to be edited to accommodate other experimental image contexts. If multiple z-stacks are present, each stack will be flat field corrected without performing any kind of z-projection.
 
