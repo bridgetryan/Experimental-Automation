@@ -30,7 +30,7 @@ The macro code is run through ImageJ (Plugins > Macros > Run… > select IJM mac
 
 This macro automates performing flat field correction on one colour channel of multi-channel fluorescence images. It expects ND2 images that are blinded and randomized using the [Image Blinder macro][Macro_Image-Blinder]. All blinded subfolders and the TIF reference image generated using the [Create Reference Image macro][Macro_Create-Reference-Image] should be in a common source folder. 
 
-Important note: this macro assumes multi-channel images without z-stacks, and that the channel needing flat field correction is C2. This code will likely need to be edited to accommodate other experimental image contexts.
+Important note: this macro assumes multi-channel images and that the channel needing flat field correction is C2. This code will likely need to be edited to accommodate other experimental image contexts. If multiple z-stacks are present, each stack will be flat field corrected without performing any kind of z-projection.
 
 The macro automates the following steps:
 1.	Open the first blinded ND2 experimental image file
