@@ -6,7 +6,9 @@ These ImageJ macros automate:
 2.	Performing flat field correction on blinded ND2 fluorescent image files using the TIF reference image
 
 ## Generate the TIF reference image
-This macro automates generating a TIF reference image using an ND2 image file collected from a uniform fluorescent slide (Chroma, 92001). 
+[Sample-Image]: https://github.com/bridgetryan/Experimental-Automation/blob/main/Flat%20Field%20Correction/Sample_488-Uniform-Fluorescent-Image_1024X1024.nd2
+
+This macro automates generating a TIF reference image using an ND2 image file collected from a uniform fluorescent slide (Chroma, 92001). ([Sample uniform fluorescent ND2 image][Sample-Image])
 
 Notes on collecting the uniform fluorescent image: 
 -	The image dimensions (ex: 1024 X 1024) should match the experimental images
@@ -30,7 +32,7 @@ This macro automates performing flat field correction on one colour channel of m
 
 Important note: this macro assumes multi-channel images without z-stacks, and that the channel needing flat field correction is C2. This code will likely need to be edited to accommodate other experimental image contexts.
 
-The macro automates the following steps
+The macro automates the following steps:
 1.	Open the first blinded ND2 experimental image file
 2.	Open the TIF reference image
 3.	Split the ND2 image channels and select channel C2
