@@ -8,7 +8,6 @@ function getRoot(){
 
 
 // Define the folder containing the uniform fluorescent nd2 image file
-//IMPORTANT NOTE: avoid spaces in folder names
 mainDir = getDirectory("Main Directory");
 print("Main directory is: " + mainDir);
 
