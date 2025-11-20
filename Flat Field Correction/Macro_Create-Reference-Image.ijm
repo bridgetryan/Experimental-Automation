@@ -8,7 +8,7 @@ function getRoot(){
 
 
 // Define the folder containing the uniform fluorescent nd2 image file
-//IMPORTANT NOTE: folder names cannot contain spaces
+//IMPORTANT NOTE: avoid spaces in folder names
 mainDir = getDirectory("Main Directory");
 print("Main directory is: " + mainDir);
 
@@ -31,7 +31,7 @@ run("Median...", "radius=20");
 
 //collect the maximum pixel intensity value from the image
 getStatistics(area, mean, min, max, std, histogram);
-//maxPixel = 
+print("max pixel intensity = " + max);
 
 //divide all pixels in the image by the maximum pixel value
 run("Divide...", "value=" + max);
